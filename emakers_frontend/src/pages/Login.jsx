@@ -13,7 +13,7 @@ function Login() {
         <input type="text" placeholder="Nome de Usuário" />
         <input type="password" placeholder="Senha" />
 
-        <Link to="/paginaInicial" className="seta-direita">
+        <Link to="/telaInicial" className="seta-direita">
           <img src={setaImagem} alt="Seta" />
         </Link>
         

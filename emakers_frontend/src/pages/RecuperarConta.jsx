@@ -10,7 +10,7 @@ function Login() {
         <div className="Titulo">Recuperar Conta</div>
         <input type="text" placeholder="Email" />
         
-        <Link to="/paginaInicial" className="seta-direita">
+        <Link to="/telaInicial" className="seta-direita">
           <img src={setaImagem} alt="Seta" />
         </Link>
 

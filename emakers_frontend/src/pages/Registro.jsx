@@ -7,14 +7,17 @@ function App() {
   return (
     <div className="bloco-principal">
       <div className="bloco-informações">
+
+        
         <div className="Titulo">Registrar</div>
         <input type="text" placeholder="Nome de Usuário" />
         <input type="text" placeholder="E-mail" />
         <input type="text" placeholder="CPF" />
+        
         <input type="password" placeholder="Senha" />
         <input type="password" placeholder="Confirmar Senha" />
 
-        <Link to="/paginaInicial" className="seta-direita">
+        <Link to="/telaInicial" className="seta-direita">
           <img src={setaImagem} alt="Seta" />
         </Link>
 

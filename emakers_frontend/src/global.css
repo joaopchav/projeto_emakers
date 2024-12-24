@@ -17,8 +17,7 @@ body, html {
   color: #4B626C;
   margin-bottom: 60px;
   margin-top: 40px;
-  text-align: center;
-  align-items: center;
+  text-align: left;
 }
 
 .bloco-informações {
@@ -32,9 +31,9 @@ body, html {
 }
 
 .bloco-informações input {
-  width: 70%;
+  width: 80%;
   height: 30px;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 35px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -66,7 +65,7 @@ body, html {
   cursor: pointer;                    
   text-decoration: none;                
   position: relative;                    
-  left: 320px;                       
+  left: 330px;                       
 }
 
 .seta-direita img {
@@ -85,4 +84,222 @@ body, html {
   object-fit: cover;
 }
 
+.carrossel-custom {
+  max-width: 1400px;
+  max-height: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.carousel-slide-container {
+  position: relative;
+}
+
+.carrossel-imagem {
+  width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+
+.carrossel-imagem-lançamento {
+  width: 240px;
+  height: 180px;
+  border-radius:5px;
+  margin-top: 25px;
+}
+
+.carrosselPrincipal{
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.lançamentos{
+  background-color:#4B626C;
+  height: 350px;
+}
+
+.TituloLançamentos{
+  margin-left: 80px;
+  font-size: 30px;
+  color: white;
+}
+
+.carrossel-lançamentos-custom {
+  max-width: 1400px; 
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+.carousel-item .d-flex {
+  gap: 50px; 
+}
+
+.price-tags {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: line;
+  gap: 5px;
+}
+
+.desconto {
+  background-color: #4B626C;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.preço-atual {
+  background-color: white;
+  color: #4B626C;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.price-tags-lançamento {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: line;
+  gap: 5px;
+}
+
+.preço-atual-lançamento {
+  background-color: white;
+  color: #4B626C;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.carousel-control-prev {
+  left: -40px; 
+}
+
+.carousel-control-next {
+  right: -40px;
+}
+
+/*FOOTER*/
+
+.footer {
+  background-color: #97A4A2;
+  color: #FFF;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  text-align: left;
+}
+
+.footer-logo-img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  font-size: 14px;
+}
+
+.footer-links, .footer-contact {
+  text-align: left;
+}
+
+.footer-links h4, .footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul, .footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li, .footer-contact ul li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a, .footer-contact ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover, .footer-contact ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #97A4A2;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #EEE;
+  margin-top: 10px;
+}
+
+/*NAVBAR*/
+
+.navbar {
+  background-color: #FBF8F4;
+  padding: 5px 10px;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-link {
+  color: #4B626C;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #B0B9B6;
+}
+
+.form-control {
+  width: 200px;
+  margin-left: 20px;  
+}
 
