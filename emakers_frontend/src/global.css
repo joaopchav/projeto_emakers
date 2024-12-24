@@ -1,0 +1,88 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #FBF8F4; 
+  font-family: 'Arial', sans-serif; 
+}
+
+.bloco-principal {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.Titulo {
+  font-size: 50px;
+  color: #4B626C;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.bloco-informações {
+  width: 35%; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+
+}
+
+.bloco-informações input {
+  width: 70%;
+  height: 30px;
+  padding: 15px;
+  margin-bottom: 35px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.bloco-informações a {
+  margin-right: 280px;
+  margin-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #B0B9B6;
+  font-weight: bold;
+  cursor: pointer;           
+  bottom: 15px;                                                                       
+
+}
+
+.bloco-informações a:hover {
+  text-decoration: underline;
+}
+
+.seta-direita {
+  display: flex;                        
+  align-items: center;                  
+  cursor: pointer;                    
+  text-decoration: none;                
+  position: relative;                    
+  left: 320px;                       
+}
+
+.seta-direita img {
+  width: 40px;                          
+  height: auto;                        
+}
+
+.bloco-imagem {
+  width: 70%;
+  height: 100%;
+}
+
+.bloco-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
