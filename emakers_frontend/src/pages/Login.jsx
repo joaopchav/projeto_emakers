@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <div className="bloco-principal">
-
       <div className="bloco-informações">
-
         <div className="Titulo">Login</div>
         <input type="text" placeholder="Nome de Usuário" />
         <input type="password" placeholder="Senha" />
