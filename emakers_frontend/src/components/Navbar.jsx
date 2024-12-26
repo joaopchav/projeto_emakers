@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -20,19 +21,19 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">Lançamentos</a>
+              <Link className="nav-link" to="/lançamentos">Lançamentos</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Populares</a>
+              <Link className="nav-link" to="/populares">Populares</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Gêneros</a>
+              <Link className="nav-link" to="/generos">Gêneros</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Promoção</a>
+              <Link className="nav-link" to="/promoção">Promoção</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Conta</a>
+              <Link className="nav-link" to="/conta">Conta</Link>
             </li>
             <li className="nav-item">
               <form className="d-flex">
