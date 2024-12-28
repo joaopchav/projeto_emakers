@@ -10,7 +10,7 @@ function TelaInicial() {
     <div>
       <Navbar />
         <div>
-            <div className="Titulo_Populares">Populares</div>
+            <div className="Titulo_Populares_Lançamentos">Populares</div>
         </div>
         
         <div className="Populares_Container">

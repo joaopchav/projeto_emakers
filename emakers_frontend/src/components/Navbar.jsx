@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <img src="../src/assets/imagem2.png" alt="Logo" className="footer-logo-img" />
+      <Link className="nav-link" to="/telaInicial"><img src="../src/assets/imagem2.png" alt="Logo" className="navbar-logo-img" /></Link>
         <button
           className="navbar-toggler"
           type="button"
