@@ -7,8 +7,15 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="../src/assets/imagem2.png" alt="Logo" className="footer-logo-img" />
-          <p className="footer-description">Seu próximo jogo começa aqui</p>
+          <img
+            src="../src/assets/imagem2.png"
+            alt="Logo"
+            className="footer-logo-img"
+          />
+          <div className="footer-text">
+            <p>GAME DAME</p>
+            <p className="footer-description">Seu próximo jogo começa aqui</p>
+          </div>
         </div>
         <div className="footer-links">
           <h4>Explorar</h4>

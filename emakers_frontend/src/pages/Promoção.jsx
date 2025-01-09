@@ -3,7 +3,7 @@ import imagem1 from "../assets/imagem1.png";
 import setaImagem from '../assets/seta.png';
 import { Link } from "react-router-dom";
 
-function Login() {
+function Promoção() {
   return (
     <div className="bloco-principal">
       <div className="bloco-informações">
@@ -28,4 +28,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Promoção;

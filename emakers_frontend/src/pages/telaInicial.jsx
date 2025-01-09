@@ -15,7 +15,7 @@ import imagem7 from "../assets/jogo7.jpg";
 import imagem8 from "../assets/jogo8.jpg";
 
 const imagensCarrossel = [
-  { imagem: imagem1, desconto: "-15%", preco: "R$ 169,90" },
+  { imagem: imagem1, desconto: "-15%", preco: "R$ 169,90", link: "/jogo" },
   { imagem: imagem2, desconto: "-25%", preco: "R$ 149,99" },
   { imagem: imagem3, desconto: "-40%", preco: "R$ 119,95" },
 ];

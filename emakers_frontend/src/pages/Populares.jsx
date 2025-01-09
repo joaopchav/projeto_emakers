@@ -5,7 +5,7 @@ import "../global.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function TelaInicial() {
+function Populares() {
   return (
     <div>
       <Navbar />
@@ -89,4 +89,4 @@ function TelaInicial() {
   );
 }
 
-export default TelaInicial;
+export default Populares;

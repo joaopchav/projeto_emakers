@@ -5,7 +5,7 @@ import "../global.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function TelaInicial() {
+function Lançamentos() {
   return (
     <div>
       <Navbar />
@@ -75,4 +75,4 @@ function TelaInicial() {
   );
 }
 
-export default TelaInicial;
+export default Lançamentos;

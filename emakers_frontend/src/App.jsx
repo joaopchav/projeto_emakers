@@ -8,6 +8,7 @@ import Lançamentos from "../src/pages/Lançamentos";
 import Populares from "../src/pages/Populares";
 import Generos from "../src/pages/Generos";
 import Promoção from "../src/pages/Promoção";
+import Jogo from "../src/pages/Jogo";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/populares" element={<Populares />} />
       <Route path="/generos" element={<Generos />} />
       <Route path="/promoção" element={<Promoção />} />
+      <Route path="/jogo" element={<Jogo />} />
     </Routes>
   );
 }
