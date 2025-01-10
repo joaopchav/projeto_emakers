@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 function Registro() {
   return (
     <div className="bloco-principal">
+      
+
       <div className="bloco-informações">
-        <div className="Titulo">Registrar</div>
+        <h1 className="Titulo">Registrar</h1>
         <input type="text" placeholder="Nome de Usuário" />
         <input type="text" placeholder="E-mail" />
         <input type="text" placeholder="CPF" />
@@ -18,11 +20,12 @@ function Registro() {
           <img src={setaImagem} alt="Seta" />
         </Link>
 
-        <Link to="/login">Fazer Login</Link>
+        <Link to="/login" className="link">Fazer Login</Link>
+        
       </div>
 
       <div className="bloco-imagem">
-        <img src={imagem1} />
+        <img src={imagem1} alt="Imagem de registro" />
       </div>
     </div>
   );

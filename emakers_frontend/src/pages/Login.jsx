@@ -15,8 +15,8 @@ function Login() {
           <img src={setaImagem} alt="Seta" />
         </Link>
         
-          <Link to="/">Criar Conta</Link>
-          <Link to="/recuperarconta">Esqueceu a senha?</Link>
+          <Link to="/" className="link">Criar Conta</Link>
+          <Link to="/recuperarconta" className="link">Esqueceu a senha?</Link>
 
       </div>
 

@@ -63,7 +63,7 @@ function Populares() {
             <div className="Imagem_Container">
                 <div className="Badge_Posicao">3°</div>
                 <img
-                    src="../src/assets/jogo3.avif"
+                    src="../src/assets/jogo3.webp"
                     className="Imagem_Populares"
                     alt="Days Gone"
                 />

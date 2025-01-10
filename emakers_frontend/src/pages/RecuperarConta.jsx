@@ -14,8 +14,8 @@ function RecuperarConta() {
           <img src={setaImagem} alt="Seta" />
         </Link>
 
-        <Link to="/">Criar Conta</Link>
-        <Link to="/login">Fazer Login</Link>
+        <Link to="/" className="link">Criar Conta</Link>
+        <Link to="/login" className="link">Fazer Login</Link>
       </div>
 
       <div className="bloco-imagem">

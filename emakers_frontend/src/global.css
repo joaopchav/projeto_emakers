@@ -5,72 +5,448 @@ body, html {
   background-color: #FBF8F4; 
   font-family: 'Arial', sans-serif; 
 }
+/*REGISTRO, LOGIN E RECUPERAR CONTA*/
 
 .bloco-principal {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
   width: 100%;
   height: 100vh;
 }
 
+.bloco-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f5f5f5;
+}
 
-/*Titulos*/
+.bloco-imagem img {
+  width: 90%; 
+  height: auto;
+  max-height: 100%; 
+}
+
+.bloco-informações {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+}
 
 .Titulo {
-  font-size: 50px;
+  font-size: 2.5rem;
   color: #4B626C;
-  margin-bottom: 60px;
-  margin-top: 40px;
-  text-align: left;
+  margin-bottom: 40px;
+}
+
+.bloco-informações input {
+  width: 80%; 
+  max-width: 60%; 
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seta-direita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.seta-direita img {
+  max-width: 40px;
+  height: auto;
+}
+
+.link {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #B0B9B6;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+/* Responsividade --> LOGIN, CRIAR CONTA E RECUPERAR CONTA*/
+@media (max-width: 768px) {
+
+  .bloco-principal {
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+  }
+
+  .bloco-imagem, .bloco-informações {
+    width: 100%;
+    height: auto; 
+  }
+
+  .bloco-informações {
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+
+  .bloco-informações input {
+    width: 100%;
+  }
+
+  .Titulo {
+    font-size: 2rem;
+  }
+}
+
+/*Página Inicial ----------> RESPONSIVA (problema no carrossel de lançamentos)*/
+
+.carrosselPrincipal {
+  margin-top: 70px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Ocupa 100% da largura */
+  max-width: 65%; /* Limita a largura máxima */
+  text-align: center;
+}
+
+
+.carrossel-imagem {
+  width: 100%;
+  height: auto; /* Proporcionalidade para evitar distorções */
+  border-radius: 10px;
+  object-fit: cover; /* Evita distorções */
+  transition: transform 0.5s ease; /* Suaviza a transição */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 100%;
+}
+
+.carousel-control-prev {
+  left: 10px; /* Aproxima as setas para dentro do contêiner */
+}
+
+.carousel-control-next {
+  right: 10px; /* Aproxima as setas para dentro do contêiner */
+}
+
+.carousel-slide-container {
+  position: relative;
+}
+
+.carrossel-lançamentos-custom {
+  max-width: 92%;
+  overflow: hidden;
+}
+
+.carrossel-imagem-lançamento {
+  width: 100%;
+  height: 9em;
+  margin-top: 35px;
+  object-fit: cover;
+}
+
+.carousel-item .d-flex {
+  gap: 50px; 
+}
+
+.lançamentos {
+  background-color: #4B626C;
+  padding: 10px 0;
+  height: 25rem; 
+}
+
+.TituloLançamentos_PaginaInicial {
+  margin-top: 2%;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.price-tags {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: line;
+  gap: 5px;
+
+}
+
+.desconto {
+  background-color: #4B626C;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.preço-atual {
+  background-color: white;
+  color: #4B626C;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.preço-atual-lançamento {
+  background-color: white;
+  color: #4B626C;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.price-tags-lançamento {
+  position: absolute;
+  bottom: 4%; 
+  left: 4%; 
+  display: flex;
+  flex-direction: column; 
+  gap: 5px;
+}
+
+/*Lançamentos ------------> RESPONSIVO */
+
+.Lançamentos_Container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2%; 
+  width: 90%; 
+  margin: 20px auto; 
+  flex-wrap: wrap;
 }
 
 .Titulo_Populares_Lançamentos {
-  font-size: 30px;
+  font-size: 2rem; 
+  font-weight: bold;
+  color: #4B626C;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.Badge_Posicao_Lançamento {
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem; 
+  padding: 5px 8px;
+  border-radius: 15px; 
+  z-index: 1;
+}
+
+.Imagem_Lançamentos {
+  width: 100%; 
+  height: 25rem;
+  margin: 15px auto;
+  border-radius: 10px; 
+}
+
+.Imagem_Container {
+  position: relative;
+  flex: 1 1 calc(50% - 2%); /* Responsivo: 50% da largura menos o gap */
+  margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .Imagem_Container {
+    flex: 1 1 calc(100% - 4%); /* Ocupa a largura total com margem */
+  }
+
+  .Badge_Posicao {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+  }
+
+  .Titulo_Populares_Lançamentos {
+    font-size: 1.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .Badge_Posicao {
+    font-size: 0.8rem;
+    padding: 3px 5px;
+  }
+
+  .Titulo_Populares_Lançamentos {
+    font-size: 1.2rem;
+  }
+
+  .Lançamentos_Container {
+    gap: 10px; 
+  }
+}
+
+/*Populares ---------> RESPONSIVO */
+
+.Populares_Container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  width: 94%;
+  margin: 0 auto; 
+}
+
+.Imagem_Populares {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.SubTitulo_Populares {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: #4B626C;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 90%;
+}
+
+.Conteudo_Populares {
+  font-size: 0.9rem;
+  line-height: 1.6; 
+  text-align: center;  
+  max-width: 90%;
+  margin-bottom: 15%;
+}
+
+.Badge_Posicao {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem; 
+  padding: 5px 8px;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.Populares_Container > div {
+  flex: 1 1 366px; 
+  max-width: 100%; 
+}
+
+@media (max-width:799px){
+  .Imagem_Container {
+    order: -1;
+  }
+}
+
+/*Generos --------> RESPONSIVO*/
+
+.Generos_Titulo {
+  font-size: 2rem;
   font-weight:bold;
   color: #4B626C;
   margin-left: 75px;
   margin-top: 25px;
+  margin-bottom: 25px;
+}
+/* Gêneros individuais */
+.Ação_e_Aventura_Container, .RPG_de_Ação_Container, .Plataforma_Container, .Ficção_Científica_Container {
+  margin-bottom: 40px;
 }
 
-.TituloLançamentos_PaginaInicial{
-  margin-left: 65px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  position: relative; 
-  top: 28px;
-}
-
-.SubTitulo_Populares {
-  font-size: 30px;
-  font-weight:bold;
-  color: #4B626C;
+.Ação_e_Aventura_Titulo, .RPG_de_Ação_Titulo, .Plataforma_Titulo,.Ficção_Científica_Titulo {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+/* Grid para cada gênero de jogo */
+.Ação_e_Aventura_Grid_Container, .RPG_de_Ação_Grid_Container,.Plataforma_Grid_Container,.Ficção_Científica_Grid_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-left: 60px;
 }
 
-.Conteudo_Populares{
-  text-align: left;
-  margin-left: 75px;
+.Ação_e_Aventura_Jogo_Container, .RPG_de_Ação_Jogo_Container,.Plataforma_Jogo_Container, .Ficção_Científica_Jogo_Container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.Ação_e_Aventura_Imagem_Container, .RPG_de_Ação_Imagem_Container,.Plataforma_Imagem_Container, .Ficção_Científica_Imagem_Container {
+  position: relative;
+  width: 100%;
+  height: 55%;
+  overflow: hidden; 
+}
+
+.Ação_e_Aventura_Imagem_Genero, .RPG_de_Ação_Imagem_Genero,.Plataforma_Imagem_Genero,.Ficção_Científica_Imagem_Genero {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Ação_e_Aventura_Descricao_Container, .RPG_de_Ação_Descricao_Container,.Plataforma_Descricao_Container, .Ficção_Científica_Descricao_Container {
+  text-align: center;
+}
+
+.Ação_e_Aventura_SubTitulo_Generos, .RPG_de_Ação_SubTitulo_Generos,.Plataforma_SubTitulo_Generos, .Ficção_Científica_SubTitulo_Generos{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Ação_e_Aventura_Conteudo_Generos, .RPG_de_Ação_Conteudo_Generos,.Plataforma_Conteudo_Generos,.Ficção_Científica_Conteudo_Generos {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/*Conta ---------> RESPONSIVO*/
 
 .Titulo_Conta {
-  font-size: 45px;
-  color: #4B626C;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+  margin-bottom: 2%;
   margin-top: 28%;
-  margin-left: 50px;
+  color: #4B626C;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  
 }
 
 .SubTitulo_Conta {
-  font-size: 20px;
+  font-size: 1.2rem;
   padding: 10px;
   color: #4B626C;
-  margin-left: 45px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .titulo-jogos-adquiridos {
-  font-size: 36px;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #FFFFFF;
   margin-left: 4%;
@@ -78,47 +454,17 @@ body, html {
   margin-bottom: 30px;
 }
 
-/*Imagens*/
-
-.bloco-imagem {
-  width: 70%;
-  height: 100%;
-}
-
-.bloco-imagem img {
+.bloco-imagem_conta {
   width: 100%;
   height: 100%;
-}
-
-.bloco-imagem_conta {
-  width: 40%;
   background-color: #4B626C;
 }
 
-.Imagem_Populares {
-  width: 640px;
-  height: 350px;
-  margin-left: 75px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.carrossel-imagem {
-  width: 100%;
-  max-height: 600px;
-  border-radius: 10px;
-}
-
-.carrossel-imagem-lançamento {
-  width: 240px;
-  height: 160px;
-  border-radius:30px;
-  margin-top: 25px;
-}
-
-.Imagem_Container {
-  position: relative;
-  display: inline-block; 
+.nota-avaliacao {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
 }
 
 .imagens-grid {
@@ -136,141 +482,32 @@ body, html {
   object-fit: cover;
 }
 
-.bloco-imagem_conta {
-  width: 100%;
-  margin: auto;
-  background-color: #4B626C;
-  padding: 20px;
-}
-
-/*Detalhes*/
-
-.Badge_Posicao {
-  position: absolute;
-  top: 10px;
-  left: 60px;
-  background-color: rgba(0, 0, 0, 0.7); 
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border-radius: 25px; 
-  z-index: 1; 
-}
-
-.star-rating {
-  font-size: 30px;
-  color: #ccc;
-  margin-top: 25px;
-}
-
-.star-rating .star {
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.star-rating .star.filled {
-  color: gold;
-}
-
-.seta-direita {
-  display: flex;                        
-  align-items: center;                  
-  cursor: pointer;                    
-  text-decoration: none;                
-  position: relative;                    
-  left: 330px;                       
-}
-
-.seta-direita img {
-  width: 40px;                          
-  height: auto;                        
-}
-
-.price-tags {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: line;
-  gap: 5px;
-}
-
-.desconto {
-  background-color: #4B626C;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.preço-atual {
-  background-color: white;
-  color: #4B626C;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.price-tags-lançamento {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: line;
-  gap: 5px;
-}
-
-.preço-atual-lançamento {
-  background-color: white;
-  color: #4B626C;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.carousel-control-prev {
-  left: -40px; 
-}
-
-.carousel-control-next {
-  right: -40px;
-}
-
 .botoes-conta {
   display: flex;
   flex-direction: column; 
   align-items: center; 
+  margin-bottom: 20%;
   gap: 20px; 
-  margin-top: 15px;
-  margin-right: 205px;
 }
 
 .botao-conta {
   background-color: #4B626C;
   color: white;
-  font-size: 16px;
   font-weight: bold;
   padding: 8px 60px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .botao-conta_admin {
   background-color: #97A4A2;
   color: white;
-  font-size: 16px;
   font-weight: bold;
   padding: 8px 60px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .botao-conta_admin:hover {
@@ -280,179 +517,6 @@ body, html {
 .botao-conta:hover {
   background-color: #3A5159;
 }
-
-.nota-avaliacao {
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  margin-top: 10px;
-}
-
-/*INFORMAÇÕES -> Pagina Registro, Login e RecuperarConta */
-
-.bloco-informações {
-  width: 35%; 
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.bloco-informações input {
-  width: 80%;
-  height: 30px;
-  padding: 20px;
-  margin-bottom: 35px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  background-color: #EFEFEF;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bloco-informações a {
-  margin-right: 280px;
-  margin-top: 20px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #B0B9B6;
-  font-weight: bold;
-  cursor: pointer;           
-  bottom: 15px;                                                                       
-}
-
-.bloco-informações a:hover {
-  text-decoration: underline;
-}
-
-.bloco-informações_conta {
-  width: 60%; 
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-/*CARROSSEL*/
-
-.carrossel-custom {
-  max-width: 1400px;
-  max-height: 600px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.carousel-slide-container {
-  position: relative;
-}
-
-.carrosselPrincipal{
-  margin-top: 25px;
-  margin-bottom: 100px;
-}
-
-.carrossel-lançamentos-custom {
-  max-width: 92%; 
-  overflow: hidden;
-}
-
-.carousel-item .d-flex {
-  gap: 50px; 
-}
-
-/*Lançamentos*/
-
-.lançamentos{
-  background-color:#4B626C;
-  height: 350px
-}
-
-/*Populares*/
-
-.Populares_Container {
-  display: flex;
-  align-items: flex-start; 
-  gap: 20px; 
-  width: 94%;
-}
-
-/*Generos*/
-
-/* Estilos gerais de layout para todos os gêneros */
-
-.Generos_Container {
-  margin-top: 30px;
-}
-
-.Generos_Titulo {
-  font-size: 30px;
-  font-weight:bold;
-  color: #4B626C;
-  margin-left: 75px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-/* Gêneros individuais */
-.Ação_e_Aventura_Container, .RPG_de_Ação_Container, .Plataforma_Container, .Ficção_Científica_Container {
-  margin-bottom: 40px;
-}
-
-.Ação_e_Aventura_Titulo, .RPG_de_Ação_Titulo, .Plataforma_Titulo,.Ficção_Científica_Titulo {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-/* Grid para cada gênero de jogo */
-.Ação_e_Aventura_Grid_Container, .RPG_de_Ação_Grid_Container,.Plataforma_Grid_Container,.Ficção_Científica_Grid_Container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-  margin-left: 60px;
-}
-
-
-.Ação_e_Aventura_Jogo_Container, .RPG_de_Ação_Jogo_Container,.Plataforma_Jogo_Container, .Ficção_Científica_Jogo_Container{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Imagem dentro do container de cada jogo */
-.Ação_e_Aventura_Imagem_Container, .RPG_de_Ação_Imagem_Container,.Plataforma_Imagem_Container, .Ficção_Científica_Imagem_Container {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden; 
-}
-
-.Ação_e_Aventura_Imagem_Genero, .RPG_de_Ação_Imagem_Genero,.Plataforma_Imagem_Genero,.Ficção_Científica_Imagem_Genero {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Descrição e título dentro do container do jogo */
-.Ação_e_Aventura_Descricao_Container, .RPG_de_Ação_Descricao_Container,.Plataforma_Descricao_Container, .Ficção_Científica_Descricao_Container {
-  text-align: center;
-}
-
-.Ação_e_Aventura_SubTitulo_Generos, .RPG_de_Ação_SubTitulo_Generos,.Plataforma_SubTitulo_Generos, .Ficção_Científica_SubTitulo_Generos{
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.Ação_e_Aventura_Conteudo_Generos, .RPG_de_Ação_Conteudo_Generos,.Plataforma_Conteudo_Generos,.Ficção_Científica_Conteudo_Generos {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-}
-
 
 /*Jogo*/
 
@@ -540,19 +604,22 @@ body, html {
   z-index: 1; 
 }
 
-/*Lançamentos*/
-
-.Lançamentos_Container {
-  display: flex;
-  align-items: flex-start; 
-  gap: 20px; 
-  width: 100%;
-  margin-bottom: 40px;
-  margin-top: 20px;
+.star-rating {
+  font-size: 30px;
+  color: #ccc;
+  margin-top: 25px;
 }
 
-/*FOOTER*/
+.star-rating .star {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 
+.star-rating .star.filled {
+  color: gold;
+}
+
+/* FOOTER -------------> RESPONSIVO */
 .footer {
   background-color: #97A4A2;
   color: #FFF;
@@ -563,40 +630,39 @@ body, html {
 .footer-content {
   display: flex;
   justify-content: space-between; 
-  align-items: center;
+  align-items: flex-start; 
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  gap: 50px; 
+  gap: 50px;
+  flex-wrap: wrap; 
 }
 
 .footer-logo {
   display: flex;
-  align-items: center; 
-  gap: 20px; 
-  margin-right: 50px; 
+  align-items: center;
+  gap: 20px;
+  margin-right: 50px;
 }
 
 .footer-logo-img {
-  max-width: 120px; 
+  max-width: 120px;
   height: auto;
 }
 
 .footer-text {
-  font-size: 16px; 
+  font-size: 16px;
   text-align: center;
-  line-height: 1.5; 
+  line-height: 1.5;
   margin-left: 10px;
-  width: 150px; 
+  max-width: 150px;
 }
 
 .footer-links, .footer-contact {
   text-align: left;
-  margin-left: 100px;
-}
-
-.footer-links, .footer-contact {
-  flex: 1; 
+  margin-left: 0; 
+  flex: 1;
+  min-width: 200px; 
 }
 
 .footer-links ul, .footer-contact ul {
@@ -628,7 +694,59 @@ body, html {
   text-align: center;
 }
 
-/*NAVBAR*/
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-logo, .footer-links, .footer-contact {
+    text-align: center; 
+    margin-left: 0; 
+  }
+
+  .footer-links ul, .footer-contact ul {
+    padding: 0;
+  }
+
+  .footer-links ul li, .footer-contact ul li {
+    margin-bottom: 2px; 
+  }
+
+  .footer-logo-img {
+    max-width: 70px; 
+  }
+
+  .footer-text {
+  
+    font-size: 14px;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 10px; 
+  }
+
+  .footer-text {
+    font-size: 12px; 
+  }
+
+  .footer-links ul li, .footer-contact ul li {
+    font-size: 12px; 
+  }
+
+  .footer-bottom {
+    font-size: 10px; 
+    padding: 5px 0; 
+  }
+}
+
+/*NAVBAR ---------> RESPONSIVO*/
 
 .navbar {
   background-color: #FBF8F4;
@@ -640,6 +758,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap; 
 }
 
 .navbar-nav {
@@ -679,4 +798,3 @@ body, html {
   width: 200px;
   margin-left: 20px;  
 }
-

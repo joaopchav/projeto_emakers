@@ -13,7 +13,7 @@ function Conta() {
       <Navbar />
       <div className="bloco-principal">
         <div className="bloco-informações_conta">
-          <div className="Titulo_Conta">Olá, Nome de Usuario</div>
+          <div className="Titulo_Conta">Olá, João Paulo</div>
           <div className="SubTitulo_Conta">
             <p>Seu email é nomeusuario@email.com</p>
             <p>Seu CPF é 123.456.678-90</p>

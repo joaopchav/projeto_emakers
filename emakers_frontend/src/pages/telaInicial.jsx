@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Carousel from "../components/Carrossel";
 import imagem1 from "../assets/jogo1.webp";
 import imagem2 from "../assets/jogo2.jpg";
-import imagem3 from "../assets/jogo3.avif";
+import imagem3 from "../assets/jogo3.webp";
 import imagem4 from "../assets/jogo4.avif";
 import imagem5 from "../assets/jogo5.jpeg";
 import imagem6 from "../assets/jogo6.jpg";
