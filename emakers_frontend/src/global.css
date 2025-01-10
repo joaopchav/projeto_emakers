@@ -522,92 +522,100 @@ body, html {
 
 .Jogo_Container {
   background-color: #3A5159;
-  width: 75%;
-  margin: 60px auto;
-  padding: 20px;
+  width: 78%;
+  margin: 5% auto;
+  padding: 2%;
   border-radius: 10px;
   display: flex;
-  gap: 20px;
-  flex-direction: row; 
-
+  gap: 2%;
+  flex-direction: column; 
 }
 
 .Imagem_Container_Jogo {
   position: relative;
+  flex: 1;
 }
 
 .Imagem_Jogo {
   max-width: 100%;
-  height: 510px;
+  height: auto;
   border-radius: 18px;
-
 }
 
 .Texto_Jogo {
   flex: 1;
   color: #fff;
+  display: flex;
   flex-direction: column; 
   justify-content: center; 
-  display: flex;
-  max-width: 28%;
+  max-width: 100%;
   text-align: center;
-  margin-top: 22px;
+  margin-top: 2%;
 }
 
 .Texto_Jogo h3 {
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 15px;
-  
+  margin-bottom: 1rem;
 }
 
 .Texto_Jogo p {
-  font-size: 18px;
+  font-size: 0.9rem; 
   line-height: 1.5;
-  
 }
 
 .btn {
   background-color: white;
-  color:#3A5159;
+  color: #3A5159;
   border: none;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
-  margin-top: 5px;
-  width: 250px;
+  margin-top: 0.5rem;
+  width: 100%; 
+  max-width: 250px; 
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #536d79;
+}
+
+.botao-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 0.5rem; 
 }
 
 .price-tags-Jogo {
   position: absolute;
-  bottom: 15px;
-  left: 620px;
+  bottom: 2%;
+  left: 50%; 
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: line;
-  gap: 5px;
+  gap: 0.5rem; 
+  gap: clamp(0.2rem, 1vw, 0.5rem); 
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  padding: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .Badge_Posicao_Jogo {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 2%; 
+  top: 2%;
   background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  padding: 5px 10px;
-  border-radius: 25px; 
-  z-index: 1; 
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.6rem, 2vw, 1rem); 
+  z-index: 1;
 }
 
+
 .star-rating {
-  font-size: 30px;
+  font-size: 1.2rem;
   color: #ccc;
-  margin-top: 25px;
+  margin-top: 1.5rem;
 }
 
 .star-rating .star {
@@ -618,6 +626,7 @@ body, html {
 .star-rating .star.filled {
   color: gold;
 }
+
 
 /* FOOTER -------------> RESPONSIVO */
 .footer {
